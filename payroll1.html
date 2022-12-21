@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <title>Zelar payroll</title>
+        <style>
+          *{
+            margin:5px;
+            padding:0px;
+            box-sizing:border-box;
+            
+          }
+            body{
+                /* background-image: url("/image/6.jpg"); */
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position:center;
+            }
+            .sidenav{
+                height: 100%;
+                line-height:60px;
+                list-style: none;
+                width: 200px;
+               position: fixed;
+              background-color:rgb(4, 4, 78);
+              /* overflow-x:hidden; */
+               padding-top:0px;
+    
+            }
+            .sidenav a {
+              padding: 6px 8px 6px 16px;
+             text-decoration: none;
+             font-size: 20px;
+             color: #fdfbfb;
+             display:block;
+             border: none;
+             background: none;
+             width:100%;
+            text-align:left;
+            cursor: pointer;
+            outline: none;
+          }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .sidenav a:hover{
+            color: #caf50a;
+            }
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0d0742;
+            max-width: 100px;
+            box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+            padding: 10px 10px;
+            /* z-index:4; */
+          }
+          .dropdown-content a:hover{
+            color: rgb(81, 69, 250);
+          }
+       .dropdown:hover .dropdown-content {
+        display:contents;
+         }
+         .topnav{
+            float:right;
+         }
+          .page{
+          display:none;
+          float:right;
+         } 
+         .page2{
+          display:none;
+          float:right;
+          margin-left:40px;
+         }
+         .page3{
+          display:none;
+          float:right;
+         }
+         .page4{
+          display:none;
+          float:right;
+         }
+        .sidenav ul li {
+          line-height:50px ;
+          text-align:left;
+          border-bottom:1px solid black;
+        }
+        /* .sidenav ul li a{
+                color:black;
+                font-size:20px;
+                /* text-align: center; */
+                /* padding-left:10px; 
+                font-weight: 400;
+                display: block;
+                width: 100%;
+                border-left: 5px solid black;
+        } */ 
+       
+        </style> 
+    <body>
+       <img src="/image/zel.webp" alt="zelar" style="width:150px;height:50px;">
+       <div class="topnav">
+        <input type="text" placeholder="search employee...">    
+        <img src="/image/n.png" alt="notifications" style="width:30;height:30;"> 
+        <img src="/settings.webp" alt="settings" style="width:30;height:30;"> <img src="/image/profile.png" alt="profile" style="width:30;height:30;">
+       </div>
+    
+       <hr>
+       <div class="sidenav"style= "overflow-y:scroll ;height:600px" ;>
+         <ul type="none">
+         <li><a href="#" id="link">About</a></li>
+         <li class="dropdown">
+            <a href="#" class="dropbtn" >Employee</a>
+              <div class="dropdown-content">
+                <ul type="none">
+                    <li><a href="#" id="link2">Employee details</a></li>
+                </ul>
+                </div>
+         </li>
+         <li class="dropdown">
+           <a href="#" class="dropbtn">Paypolicy</a>
+            <div class="dropdown-content">
+             <ul type="none">
+             <li><a href="#">Attendance policy</a></li>
+             <li><a href="#">Leave Policy</a></li>
+             <li><a href="#">Health allowances</a></li>
+             </ul>
+             </div>
+        </li>
+         <li class="dropdown">
+           <a href="#" class="dropbtn">Caluculations</a>
+            <div class="dropdown-content">
+             <ul type="none">
+             <li><a href="#" id="link3">Taxes & deductions</a></li>
+             <li><a href="#">total salary</a></li>
+             <li><a href="#">appraisal</a></li>
+             </ul>
+        <li><a href="#" id="link4">Payslip</a></li>
+        <li><a href="https://zelarsoft.com/contact-us/">Contact and help</a></li>
+         </ul>
+         </div>
+         <div class="page" id="web">
+         <iframe src="http://127.0.0.1:5500/HTMl/About.html" title="web" height="500px" width="1020"></iframe>
+         <button id="close">closed</button>
+         </div>
+          <div class="page2" id="web2">
+         <iframe src="http://127.0.0.1:5500/HTMl/employee%20details.html" target="new" title="web" height="600px" width="1050"></iframe>
+         <button id="close2">closed</button>
+         </div>
+         <div>
+          <div class="page3" id="web3">
+            <iframe src="http://127.0.0.1:5500/HTMl/tax%20deductions.html" title="web" height="600px" width="1000"></iframe>
+            <button id="close3">closed</button>
+          </div>
+         </div>
+         <div>
+          <div class="page4" id="web4">
+            <iframe src="http://127.0.0.1:5500/HTMl/payslip.html" title="web" height="600px" width="1080"></iframe>
+            <!-- <button id="close4">closed</button> -->
+          </div>
+         </div>
+         <script>
+          var web1=document.getElementById("link");
+          var page1=document.getElementById("web");
+          var close1=document.getElementById("close");
+          web1.onclick=function(){
+            page1.style.display="block";
+            page2.style.display="none";
+            
+
+          }
+          close1.onclick=function(){
+            page1.style.display="none";
+
+          }
+          
+          var web2=document.getElementById("link2");
+          var page2=document.getElementById("web2");
+          var close2=document.getElementById("close2");
+          web2.onclick=function(){
+            page2.style.display="block";
+
+          }
+          close2.onclick=function(){
+            page2.style.display="none";
+
+          }
+          var web3=document.getElementById("link3");
+          var page3=document.getElementById("web3");
+          var close3=document.getElementById("close3");
+          web3.onclick=function(){
+            page3.style.display="block";
+
+          }
+          close3.onclick=function(){
+            page3.style.display="none";
+
+          }
+          
+          var web4=document.getElementById("link4");
+          var page4=document.getElementById("web4");
+          var close4=document.getElementById("close4");
+          web4.onclick=function(){
+            page4.style.display="block";
+
+          }
+          close4.onclick=function(){
+            page4.style.display="none";
+
+          }
+
+
+         </script>
+    </body>
+</html>
